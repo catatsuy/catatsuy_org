@@ -47,6 +47,20 @@ h1 {
   }
 }
 
+.ca-title {
+  h2 {
+    font-family: 'Flamenco', cursive;
+  }
+}
+
+.ca-contents {
+  text-align: left;
+  line-height: 1.4;
+  li + li {
+    margin-top: 5px;
+  }
+}
+
 .ca-social-buttons {
   display: inline-block;
   margin-bottom: 0;
@@ -111,4 +125,8 @@ footer.ca-footer {
   .source {
     margin-top: 12px;
   }
+}
+
+.large {
+  font-size: 30px;
 }
