@@ -101,11 +101,14 @@ h1 {
 
 footer.ca-footer {
   font-family: 'Electrolize', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid #e5e5e5;
   .copyright {
+    margin-top: 12px;
+  }
+  .source {
     margin-top: 12px;
   }
 }
