@@ -1,0 +1,98 @@
+body {
+  text-align: center;
+  font-family: sans-serif; }
+
+h1 {
+  color: rgba(0, 0, 0, .3);
+  font-family: 'Londrina Shadow', cursive;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: -1px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  margin: 0;
+  a {
+    color: rgba(0, 0, 0, .3);
+    &:hover {
+      color: rgba(0, 0, 0, .5);
+      text-decoration: none;
+    }
+  }
+}
+
+.ca-sidenav {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  text-shadow: 0 1px 0 #fff;
+  background-color: #fafaff;
+  border-radius: 5px;
+  font-size: 17px;  
+  ul {
+    font-size: 13px;
+  }
+}
+
+.ca-social-buttons {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+    line-height: 1;
+  }
+  li + li {
+    margin-left: 15px;
+  }
+}
+
+.doc {
+  font-size: 14px;
+  margin: 0; }
+  .doc:before,
+  .doc:after {
+    opacity: .2;
+    padding: 6px;
+    font-style: normal;
+    position: relative;
+    content: "•"; }
+  .doc a {
+    color: rgba(0, 0, 0, 0.3); }
+    .doc a:hover {
+      color: #666; }
+
+.welcome {
+  -webkit-animation-name: welcome;
+  -webkit-animation-duration: .9s; }
+
+@-webkit-keyframes welcome {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+   -webkit-transform: scale(0);
+   opacity: 0;
+  }
+  82.5% {
+    -webkit-transform: scale(1.03);
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+footer.ca-footer {
+  font-family: 'Electrolize', sans-serif;
+  font-size: 12px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5;
+  .copyright {
+    margin-top: 12px;
+  }
+}
