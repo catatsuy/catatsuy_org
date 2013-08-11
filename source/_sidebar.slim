@@ -1,0 +1,21 @@
+.ca-sidebar
+  ul.nav.nav-stacked.text-left.ca-sidenav
+    li.title Contents
+    ul.nav
+      li= link_to "Profile", "/profile.html",   class: "lsf-icon", title: "laugh"
+      li= link_to "Keywords", "/keywords.html", { class: "lsf-icon-notitle", title: "keywords", data: { symbol: "key" } }
+    li.title
+      span.lsf-icon title="external"
+      | My Service
+    ul.nav
+      li= link_to "matw.co", "https://matw.co", { class: "lsf-icon-notitle", title: "matw.co", target: "_blank", data: { symbol: "web" } }
+    li.title
+      span.lsf-icon title="external"
+      | External Services
+    ul.nav
+      li= link_to "github/catatsuy", "https://github.com/catatsuy", class: "lsf-icon", title: "github", target: "_blank"
+      li= link_to "@catatsuy", "https://twitter.com/catatsuy", class: "lsf-icon", title: "twitter", target: "_blank"
+      li= link_to "/catatsuy", "https://www.facebook.com/catatsuy", class: "lsf-icon", title: "facebook", target: "_blank"
+      li= link_to "id:catatsuy", "http://catatsuy.hateblo.jp", class: "lsf-icon", title: "hatena", target: "_blank"
+      li= link_to "blog.catatsuy.org", "https://blog.catatsuy.org", class: "lsf-icon", title: "wordpress", target: "_blank"
+      li= link_to "Qiita::catatsuy", "http://qiita.com/catatsuy", { class: "lsf-icon-notitle", title: "qiita", target: "_blank", data: { symbol: "write" } }
