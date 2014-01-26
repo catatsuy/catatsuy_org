@@ -1,8 +1,8 @@
 * Tatsuya KANEKO
 * catatsuy
 * pixiv
+* はてなインターン 2012
 * 東工大
-* 南武線
 * 川崎
 * 聖光学院
 * 中華街
