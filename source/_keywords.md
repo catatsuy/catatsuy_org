@@ -7,6 +7,7 @@
 * 中華街
 * 川崎
 * 厚木
+* [ピクシブ株式会社に入社しました - catatsuyとは](http://catatsuy.hateblo.jp/entry/2013/11/04/005348)
 * [黒人集団に襲われて in San Francisco](http://blog.catatsuy.org/a/25)
 * [はてなインターン2012でスコンブを刺し損ねた話](http://blog.catatsuy.org/a/229)
 * [pixivインターンに参加してきた](http://blog.catatsuy.org/a/259)
