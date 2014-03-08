@@ -7,10 +7,7 @@ html
     meta content="width=device-width,initial-scale=1.0" name="viewport"
     link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" type="image/vnd.microsoft.icon"
     /! Use title if it's in the page YAML frontmatter
-    - if current_page.data.title
-      title= "#{current_page.data.title} - catatsuy's Website"
-    - else
-      title catatsuy's Website
+    title= [current_page.data.title, "catatsuy's Website"].compact.join(" - ")
     /! Bootstrap core CSS
     = stylesheet_link_tag "bootstrap", "all"
   body class=(page_classes)
