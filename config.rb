@@ -72,7 +72,7 @@ end
 activate :deploy do |deploy|
   deploy.method = :rsync
   deploy.user = "catatsuy"
-  deploy.host = "catatsuy.org"
-  deploy.port = 11115
-  deploy.path = "/home/catatsuy/www/catatsuy.org"
+  deploy.host = "160.16.89.201"
+  deploy.port = 11111
+  deploy.path = "/home/www/www.catatsuy.org"
 end
