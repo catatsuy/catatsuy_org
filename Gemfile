@@ -14,6 +14,8 @@ gem "slim"
 
 gem "middleman-deploy"
 
+gem 'eventmachine', '~>1.0.7'
+
 # Cross-templating language block fix for Ruby 1.8
 platforms :mri_18 do
   gem "ruby18_source_location"
