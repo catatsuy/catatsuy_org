@@ -11,6 +11,7 @@
 * [黒人集団に襲われて in San Francisco](http://blog.catatsuy.org/a/25)
 * [はてなインターン2012でスコンブを刺し損ねた話](http://blog.catatsuy.org/a/229)
 * [pixivインターンに参加してきた](http://blog.catatsuy.org/a/259)
+* [本を書きました - catatsuyとは](http://catatsuy.hateblo.jp/entry/2015/03/11/225532)
 * 日本神話
 * 古事記
 * 登山（渓友会）
