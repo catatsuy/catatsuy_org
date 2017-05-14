@@ -10,15 +10,14 @@ html
     title= [current_page.data.title, "catatsuy's Website"].compact.join(" - ")
     /! Bootstrap core CSS
     = stylesheet_link_tag "bootstrap", "all"
+    = stylesheet_link_tag "font-awesome", "all"
   body class=(page_classes)
     .container
-      .page-header
+      .page-header.ca-header
         h1
           a href="/"
             | catatsuy's Website
-      .col-lg-3
-        = partial "sidebar"
-      .col-lg-9
+      .col-lg-12
         = yield
     = partial "footer"
     = partial "include_js"
