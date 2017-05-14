@@ -1,11 +1,9 @@
 body {
-  text-align: center;
   font-family: sans-serif;
 }
 
 h1 {
   color: rgba(0, 0, 0, .3);
-  font-family: 'Londrina Shadow', cursive;
   font-weight: bold;
   font-size: 32px;
   letter-spacing: -1px;
@@ -20,38 +18,8 @@ h1 {
   }
 }
 
-.ca-sidenav {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  text-shadow: 0 1px 0 #fff;
-  background-color: #fafaff;
-  border-radius: 5px;
-  font-size: 17px;
-  li.title {
-    margin-top: 10px;
-    border-bottom: 1px solid #e5e5e5;
-  }
-  ul {
-    font-size: 13px;
-    li.selected {
-      span {
-        padding: 10px 15px;
-        display: block;
-        background-color: #f7f7f7;
-        color: rgba(0, 0, 0, .5);
-        font-weight: bold;
-      }
-    }
-  }
-}
-
-.ca-title {
-  h2 {
-    font-family: 'Flamenco', cursive;
-  }
+.ca-header {
+  text-align: center;
 }
 
 .ca-contents {
@@ -60,6 +28,24 @@ h1 {
   li + li {
     margin-top: 5px;
   }
+}
+
+.ca-docs-section {
+  .links {
+    padding: 0;
+    li {
+      list-style: none;
+      display: inline-block;
+      font-size: x-large;
+    }
+    li + li {
+      margin-left: 10px;
+    }
+  }
+}
+
+.history {
+  list-style-type: none;
 }
 
 .ca-social-buttons {
@@ -77,9 +63,10 @@ h1 {
 }
 
 footer.ca-footer {
-  font-family: 'Electrolize', sans-serif;
+  text-align: center;
   font-size: 12px;
   margin-top: 30px;
+  margin-bottom: 10px;
   padding-top: 20px;
   border-top: 1px solid #e5e5e5;
   .copyright {
