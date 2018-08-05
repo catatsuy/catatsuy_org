@@ -1,0 +1,48 @@
+<!DOCTYPE html><html><head><meta charset="utf-8" /><!--Always force latest IE rendering engine or request Chrome Frame--><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><meta content="width=device-width,initial-scale=1.0" name="viewport" /><link href="/favicon.ico" rel="icon" sizes="16x16 32x32 48x48" type="image/vnd.microsoft.icon" /><!--Use title if it's in the page YAML frontmatter--><title>0==’hoge’の挙動（PHP/Perl/Javascript/Ruby） - catatsuy's Blog</title><!--Bootstrap core CSS--><link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/css/all.css" rel="stylesheet" type="text/css" /></head><body><div class="container"><div class="page-header"><h1><a href="/">catatsuy's Blog</a></h1></div><div class="post-data"><article><hgroup><h2>0==’hoge’の挙動（PHP/Perl/Javascript/Ruby）</h2><div class="post-meta">Posted on 2012/08/29</div></hgroup><div class="post-entry">
+  <p>この前気付いたのですが，PHPでは何と驚くべきことに<strong>0 == ‘hoge’はtrueになります<br>
+    </strong><br>
+    からくりは文字列と数値を比較すると文字列を数値型にキャストして比較しようとします<br>
+    PHPの仕様では’14′や’14hoge’は14にキャストされるというように数字から始まっていたらそこが利用されます<br>
+    しかし’hoge’は数字から始まっていないのでキャストすると0になってしまうのです</p>
+  <p>これによって0 == ‘hoge’がtrueという直感に反した動きをするわけです<br>
+    では他の言語ではこんなこと起こりうるのか簡単に見てみたいと思います</p>
+  <p><span id="more-226"></span></p>
+  <h3>Perl</h3>
+  <p>これから紹介する言語の中では最もPHPに近い挙動をします<br>
+    というのもPHPと同じ結果になります</p>
+  <p>ただしPerlは==は数値としての比較，eqが文字列としての比較という区別があります<br>
+    そのため0 == ‘hoge’を比較するとPHPと同じ理由によってtrueにはなりますが，実際にこのようなコードを書くことはありえません<br>
+    またPerlは最初にuse strict; use warnings;するのが普通ですので，このようなコードを書くと警告が出ます</p>
+  <h3>Javascript</h3>
+  <p>こいつは意外と複雑です<br>
+    数値型と文字列型を==で比較すると文字列型を数値型にキャストするのは同じです<br>
+    しかしキャストされた結果がPHPなどとは違います</p>
+  <p>Javascriptでは数値型にキャストする場合はNumber()を使うのでこれを使って説明すると，Number(‘hoge’)はNaN(Not a Number)に変換されます<br>
+    NaNは特殊な値で何と比較してもfalseなので（NaN == NaNもfalseになります）なので0 == ‘hoge’はfalseになります</p>
+  <p>そしてもっと書くとNumber(’14′) = 14となりますが，Number(’14hoge’)はNaNになります<br>
+    PHPなどに近い挙動をさせたい場合はparseIntを使えばparseInt(’14hoge’)=14になります</p>
+  <p>ただしparseInt(‘hoge’)はNaNになるので0 == parseInt(‘hoge’)はfalseになります</p>
+  <p>また文字列から数値型に変換するのにNumberと書くのは長いので+’14′と書くのが普通のようです<br>
+    +が最初に書かれていると数値型にキャストされます</p>
+  <p>ただし0 + ‘hoge’は0が文字列にキャストされて’0hoge’が返ってくるので注意が必要です</p>
+  <h3>Ruby</h3>
+  <p>こいつは簡単です<br>
+    Rubyでは数値型と文字列の暗黙的な変換は行わず，かつ型が違うものは比較できないので0 == ‘hoge’はエラーが出ます<br>
+    なので型が違うもの同士の比較は明示的にキャストする必要があります</p>
+  <p>数値型にするには<strong>.to_iメソッド</strong>を使います<br>
+    ‘hoge’.to_iは0に’14hoge’.to_iは14になりますから0 == ‘hoge’.to_iはtrueになります<br>
+    が…これはいかにも蛇足感がw</p>
+  <h3>まとめ</h3>
+  <p>明らかにおかしな挙動をするのはPHPだけだと思います<br>
+    ただPHPとJavascriptには<strong>型変換をしない===</strong>があります<br>
+    こちらを使いましょう（特にPHPは）</p>
+</div>
+<div class="ca-social-button">
+  <div>
+    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  </div>
+  <div>
+    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+</div>
+</article></div></div><footer class="footer"><div class="container"><p class="text-muted">The source code of this site is on <a target="_blank" href="https://github.com/catatsuy/catatsuy_blog">GitHub</a>.</p></div></footer></body></html>
