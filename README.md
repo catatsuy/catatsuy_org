@@ -1,6 +1,5 @@
 catatsuy_org
 ==================================
 
-[catatsuy's Website](http://www.catatsuy.org/)
-
-use Middleman
+  * https://www.catatsuy.org/
+  * https://blog.catatsuy.org/
