@@ -39,10 +39,9 @@
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('text').addEventListener('input', (e) => {
         const newText = e.target.value.split("\n").map((str) => {
-          return str.trim().replace(/^\/\/\s?/, '');
+          return str.trim().replace(/^\s+/, '').replace(/^#*\s*/, '').replace(/^\/*\s*/, '');
         }).join(' ');
-        const display = document.getElementById('display-text');
-        display.innerText = newText;
+        document.getElementById('display-text').innerText = newText;
       });
 
       document.getElementById('copybutton').addEventListener('click', () => {
