@@ -39,7 +39,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('text').addEventListener('input', (e) => {
         const newText = e.target.value.split("\n").map((str) => {
-          return str.trim().replace(/^\s+/, '').replace(/^#*\s*/, '').replace(/^\/*\s*/, '');
+          return str.trim().replace(/^\s+/, '').replace(/^#*\s*/, '').replace(/^\/*\s*/, '').replace(/^[/*]+\s*/, '');
         }).join(' ');
         document.getElementById('display-text').innerText = newText;
       });
